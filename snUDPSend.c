@@ -31,8 +31,8 @@ void snCommunication(int* sendFrame)
     send(sock , sendFrame , (int)sizeof(sendFrame), 0 );
     printf("SGNB Addition Request Acknowledge Message has been sent\n");
     valread = read( sock , buffer, 73);
-    for (int i=0;i<sizeof(buffer);i++)
+    for (int i=0;i<sizeof(buffer)/sizeof(int);i++)
     {
-        printf("%d  i: %d\n",*(buffer+i),i );
+        printf("%d  i: %d\n",*(buffer+i*sizeof(int)),i );
     }
 }

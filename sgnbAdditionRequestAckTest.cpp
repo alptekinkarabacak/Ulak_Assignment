@@ -7,7 +7,7 @@
 int main(int argc, char const *argv[])
 {
     // SGNB Addition Request Acknowledge frame
-    int sendingFrame[100];
+    int sendingFrame[33];
     SGNBAdditionRequestAck * sGNBAdditionRequestAck = new SGNBAdditionRequestAck();
     SGNBAdditionRequestAck :: MessageType * messageType = new SGNBAdditionRequestAck :: MessageType();
 	SGNBAdditionRequestAck :: ENDCResourceConfiguration * endcResourceConfiguration = new SGNBAdditionRequestAck :: ENDCResourceConfiguration();

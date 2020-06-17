@@ -7,7 +7,7 @@
 int main(int argc, char const *argv[])
 {
     // SGNB Addition Request Frame
-    int sendingFrame[100];
+    int sendingFrame[73];
     SGNBAdditionRequest * sGNBAdditionRequest = new SGNBAdditionRequest();
     SGNBAdditionRequest :: MessageType * messageType = new SGNBAdditionRequest :: MessageType();
     messageType -> procedureCode = 5;

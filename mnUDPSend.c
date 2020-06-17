@@ -48,8 +48,8 @@ void mnCommunication(int* sendFrame)
     send(new_socket , sendFrame , (int)sizeof(sendFrame), 0 );
     printf("SGNB Addition Request Message has been sent\n");
     valread = read( new_socket , buffer, 1024);
-    for (int i=0;i<sizeof(buffer);i++)
+    for (int i=0;i<sizeof(buffer)/sizeof(int);i++)
     {
-        printf("%d  i: %d\n",*(buffer+i),i );
+        printf("%d  i: %d\n",*(buffer+i*sizeof(int)),i );
     }
 }

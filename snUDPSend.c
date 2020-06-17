@@ -9,7 +9,7 @@ void snCommunication(int* sendFrame)
 {
     int sock = 0, valread;
     struct sockaddr_in serv_addr;
-    char buffer[1024] = {0};
+    char buffer[73] = { };
     if ((sock = socket(AF_INET, SOCK_STREAM, 0)) < 0)
     {
         printf("\n Socket creation error \n");
@@ -30,6 +30,9 @@ void snCommunication(int* sendFrame)
     }
     send(sock , sendFrame , (int)sizeof(sendFrame), 0 );
     printf("SGNB Addition Request Acknowledge Message has been sent\n");
-    valread = read( sock , buffer, 1024);
-    printf("%s\n",buffer );
+    valread = read( sock , buffer, 73);
+    for (int i=0;i<sizeof(buffer);i++)
+    {
+        printf("%d  i: %d\n",*(buffer+i),i );
+    }
 }

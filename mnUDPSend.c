@@ -10,7 +10,7 @@ void mnCommunication(int* sendFrame)
     struct sockaddr_in address;
     int opt = 1;
     int addrlen = sizeof(address);
-    char buffer[1024] = {0};
+    char buffer[33] = {0};
     // Creating socket file descriptor
     if ((server_fd = socket(AF_INET, SOCK_STREAM, 0)) == 0)
     {
@@ -48,5 +48,8 @@ void mnCommunication(int* sendFrame)
     send(new_socket , sendFrame , (int)sizeof(sendFrame), 0 );
     printf("SGNB Addition Request Message has been sent\n");
     valread = read( new_socket , buffer, 1024);
-    printf("%s\n",buffer );
+    for (int i=0;i<sizeof(buffer);i++)
+    {
+        printf("%d  i: %d\n",*(buffer+i),i );
+    }
 }

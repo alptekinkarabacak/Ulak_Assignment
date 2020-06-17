@@ -3,10 +3,15 @@
 Programı çalıştırmak için:
 
 g++ -c mnUDPSend.c
+
 g++ -c sgnbAdditionRequestTest.cpp
+
 g++ -o sgnbAdditionRequest mnUDPSend.o sgnbAdditionRequestTest.o
+
 g++ -c snUDPSend.c
+
 g++ -c sgnbAdditionRequestAckTest.cpp
+
 g++ -o sgnbAdditionRequestAck snUDPSend.o sgnbAdditionRequestAckTest.o
 
 Komutları yazılıp kaynak kodları derlenmelidir.

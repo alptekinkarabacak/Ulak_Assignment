@@ -8,4 +8,6 @@ Derleme sonrasında " sgnbAdditionRequest " " sgnbAdditionRequestAck " adında 2
 Önce " sgnbAdditionRequest " ardından yeni bir terminal penceresinde de " sgnbAdditionRequestAck " çalıştırılmalıdır.
 Data gönderme işlemleri tamamlandığında, " sgnbAdditionRequest " penceresinde " SGNB Addition Request Message has been sent ", 
 " sgnbAdditionRequestAck " terminalinde " SGNB Addition Request Acknowledge Message has been sent " mesajları gözükecektir.
+Bir hata var sanırım byteları kaydırdım fakat bazı datalar gitmemiş.
+Doxygen' e uygun temiz kod yazmaya çalıştım fakat, hatayı bulamadım. Aslında gelen dataları parse edip gelen bilgileri ekrana daha düzgün yazdırmak isterdim.
 
